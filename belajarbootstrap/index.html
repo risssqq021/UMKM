@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Coklat Kita, cokelat artisan buatan rumahan di Bandung. Pilih cokelat favorit atau paket hadiah.">
+    <title>Coklat Kita | Cokelat Artisan Bandung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #342117;
+            --cocoa: #4d2b1c;
+            --cream: #fffaf2;
+            --beige: #f1e4d1;
+            --orange: #d98248;
+            --muted: #75685e;
+        }
+
+        body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; }
+        h1, h2, h3, .brand { font-family: 'Playfair Display', Georgia, serif; }
+        .topbar, .story, footer { background: var(--cocoa); color: var(--cream); }
+        .brand { color: var(--cocoa); font-size: 1.35rem; font-weight: 700; }
+        .brand span, .eyebrow { color: var(--orange); }
+        .eyebrow { font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+        .btn-order { background: var(--orange); border: 0; border-radius: 2px; color: white; font-weight: 600; padding: .75rem 1rem; }
+        .btn-order:hover { background: #bd6b34; color: white; }
+        .hero, .section { padding: 4rem 0; }
+        .hero { background: repeating-linear-gradient(135deg, rgba(255, 255, 255, .35) 0 1px, transparent 1px 24px), linear-gradient(115deg, #f1e4d1, var(--cream) 62%, #f3ddc4); }
+        .hero h1 { font-size: 3.25rem; line-height: 1.1; }
+        .description { color: var(--muted); line-height: 1.8; }
+        .hero img { aspect-ratio: 5 / 4; max-height: 440px; object-fit: cover; width: 100%; }
+        .feature { background: linear-gradient(120deg, var(--beige), #fff7e9); border-left: 3px solid var(--orange); padding: 1.25rem; }
+        .product img, .story img { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
+        .product h3 { font-size: 1.2rem; margin: 0; }
+        .product .d-flex { align-items: baseline; flex-wrap: wrap; gap: .5rem; }
+        .price { color: var(--cocoa); font-weight: 700; white-space: nowrap; }
+        .story .description { color: #f0e5d8; }
+        #promo { background: var(--cocoa); color: var(--cream); }
+        #promo .description { color: #f0e5d8; }
+        #galeri { background: #f6eddf; }
+        #galeri img { aspect-ratio: 1; object-fit: cover; width: 100%; }
+        #ulasan blockquote { border-left: 3px solid var(--orange); color: var(--muted); padding-left: 1rem; }
+        .contact { background: var(--beige); padding: 1.5rem; }
+        #menu { background: linear-gradient(180deg, #f6eddf, var(--cream) 90%); }
+        footer .container { flex-wrap: wrap; gap: .5rem 1rem; }
+
+        @media (max-width: 991px) {
+            .hero h1 { font-size: 2.75rem; }
+            .hero img { aspect-ratio: 16 / 10; max-height: 360px; }
+        }
+
+        @media (max-width: 767px) {
+            .hero, .section { padding: 2.75rem 0; }
+        }
+
+        @media (max-width: 575px) {
+            .hero h1 { font-size: 2.15rem; }
+            .hero img { aspect-ratio: 4 / 3; max-height: none; }
+            .feature { padding: 1rem .5rem; }
+            .section { padding: 2.5rem 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar py-2 text-center small">Cokelat artisan dari Bandung · Dibuat untuk momen spesial</div>
+
+    <nav class="navbar navbar-expand-lg py-3" aria-label="Navigasi utama">
+        <div class="container">
+            <a class="navbar-brand brand" href="#beranda">Coklat <span>Kita.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Buka navigasi">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <div class="navbar-nav mx-auto">
+                    <a class="nav-link" href="#menu">Produk</a>
+                    <a class="nav-link" href="#promo">Promo</a>
+                    <a class="nav-link" href="#cerita">Cerita</a>
+                    <a class="nav-link" href="#galeri">Galeri</a>
+                    <a class="nav-link" href="#ulasan">Ulasan</a>
+                    <a class="nav-link" href="#kontak">Kontak</a>
+                </div>
+                <a class="btn btn-order mt-2 mt-lg-0" href="https://wa.me/6282128950546" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" id="beranda">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6">
+                        <p class="eyebrow">Cokelat artisan · Bandung</p>
+                        <h1>Manisnya cokelat, hangatkan setiap cerita.</h1>
+                        <p class="description">Cokelat pilihan yang dibuat dalam batch kecil, cocok untuk teman santai atau hadiah penuh perhatian.</p>
+                        <a class="btn btn-order" href="#menu">Jelajahi produk</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Aneka cokelat artisan siap dinikmati">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-4" aria-label="Keunggulan Coklat Kita">
+            <div class="row g-3 text-center">
+                <div class="col-md-4"><div class="feature">Cokelat pilihan</div></div>
+                <div class="col-md-4"><div class="feature">Dibuat dengan teliti</div></div>
+                <div class="col-md-4"><div class="feature">Siap jadi hadiah manis</div></div>
+            </div>
+        </section>
+
+        <section class="section" id="menu">
+            <div class="container">
+                <p class="eyebrow">Pilihan Coklat Kita</p>
+                <h2 class="mb-4">Temukan cokelat favoritmu</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <article class="product">
+                            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Dark chocolate batangan" loading="lazy">
+                            <p class="eyebrow mt-3 mb-2">Best seller</p>
+                            <div class="d-flex justify-content-between mt-3"><h3>Dark Chocolate</h3><span class="price">Rp35.000</span></div>
+                            <p class="description">Cokelat pekat dengan rasa kakao yang kaya dan seimbang.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="product">
+                            <img src="https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Milk chocolate dengan tekstur lembut" loading="lazy">
+                            <p class="eyebrow mt-3 mb-2">Favorit</p>
+                            <div class="d-flex justify-content-between mt-3"><h3>Milk Chocolate</h3><span class="price">Rp32.000</span></div>
+                            <p class="description">Lembut, creamy, dan pas untuk camilan sehari-hari.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="product">
+                            <img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Choco crunch dengan taburan renyah" loading="lazy">
+                            <p class="eyebrow mt-3 mb-2">Baru</p>
+                            <div class="d-flex justify-content-between mt-3"><h3>Choco Crunch</h3><span class="price">Rp28.000</span></div>
+                            <p class="description">Paduan cokelat dan tekstur renyah dalam setiap gigitan.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="product">
+                            <img src="https://images.unsplash.com/photo-1575377427642-087cf684f29d?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Almond chocolate dengan kacang almond" loading="lazy">
+                            <p class="eyebrow mt-3 mb-2">Signature</p>
+                            <div class="d-flex justify-content-between mt-3"><h3>Almond Chocolate</h3><span class="price">Rp42.000</span></div>
+                            <p class="description">Cokelat pilihan dengan almond panggang yang gurih.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="product">
+                            <img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Choco cookies dengan potongan cokelat" loading="lazy">
+                            <p class="eyebrow mt-3 mb-2">Favorit</p>
+                            <div class="d-flex justify-content-between mt-3"><h3>Choco Cookies</h3><span class="price">Rp25.000</span></div>
+                            <p class="description">Cookies renyah dengan potongan cokelat di setiap gigitan.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="product">
+                            <img src="https://images.unsplash.com/photo-1582176604856-e824b4736522?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Paket aneka cokelat untuk dibagikan" loading="lazy">
+                            <p class="eyebrow mt-3 mb-2">Paket hemat</p>
+                            <div class="d-flex justify-content-between mt-3"><h3>Paket Coklat Hemat</h3><span class="price">Rp69.000</span></div>
+                            <p class="description">Paket isi tiga varian favorit untuk dinikmati bersama.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="promo">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8">
+                        <p class="eyebrow">Promo berbagi</p>
+                        <h2>Paket Coklat Hemat untuk momen bersama.</h2>
+                        <p class="description mb-lg-0">Tiga pilihan cokelat dalam satu paket praktis. Cocok untuk dibawa berkunjung atau jadi hadiah kecil.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="btn btn-order" href="https://wa.me/6282128950546?text=Halo%20Coklat%20Kita%2C%20saya%20ingin%20pesan%20Paket%20Coklat%20Hemat" target="_blank" rel="noopener noreferrer">Pesan paket · Rp69.000</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story section" id="cerita">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-md-6">
+                        <img src="https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Cokelat yang disiapkan untuk dikemas" loading="lazy">
+                    </div>
+                    <div class="col-md-6">
+                        <p class="eyebrow">Cerita Coklat Kita</p>
+                        <h2>Berawal dari kebiasaan berbagi cokelat.</h2>
+                        <p class="description">Coklat Kita tumbuh dari dapur rumahan di Bandung. Kami senang meracik cokelat untuk keluarga dan teman, lalu membagikannya lebih luas. Setiap produk dibuat dengan teliti agar terasa spesial, baik untuk dinikmati sendiri maupun diberikan kepada orang tersayang.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="galeri">
+            <div class="container">
+                <p class="eyebrow">Dari dekat</p>
+                <h2 class="mb-4">Momen manis Coklat Kita</h2>
+                <div class="row g-3">
+                    <div class="col-6 col-lg-3"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Cokelat hitam pilihan" loading="lazy"></div>
+                    <div class="col-6 col-lg-3"><img src="https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Aneka cokelat untuk hadiah" loading="lazy"></div>
+                    <div class="col-6 col-lg-3"><img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Cokelat renyah untuk camilan" loading="lazy"></div>
+                    <div class="col-6 col-lg-3"><img src="https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Cookies cokelat buatan Coklat Kita" loading="lazy"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="ulasan">
+            <div class="container">
+                <p class="eyebrow">Kata pelanggan</p>
+                <h2 class="mb-4">Cokelat yang bikin ingin berbagi.</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <blockquote class="mb-0">
+                            <p>“Rasanya pas, tidak terlalu manis. Almond chocolate jadi favorit di rumah.”</p>
+                            <p><strong>Rina · Bandung</strong></p>
+                        </blockquote>
+                    </div>
+                    <div class="col-md-4">
+                        <blockquote class="mb-0">
+                            <p>“Paketnya praktis untuk hadiah. Dikemas rapi dan cokelatnya enak.”</p>
+                            <p><strong>Dimas · Cimahi</strong></p>
+                        </blockquote>
+                    </div>
+                    <div class="col-md-4">
+                        <blockquote class="mb-0">
+                            <p>“Choco crunch-nya seru, ada tekstur renyah di setiap gigitan.”</p>
+                            <p><strong>Nadia · Bandung</strong></p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="kontak">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-md-6">
+                        <p class="eyebrow">Mampir atau pesan</p>
+                        <h2>Ada cokelat untuk setiap cerita.</h2>
+                        <p class="description">Jalbud, Bandung<br>Pesan langsung melalui WhatsApp.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="contact">
+                            <p class="mb-2">Pilih cokelat favoritmu dan pesan sekarang.</p>
+                            <a class="btn btn-order" href="https://wa.me/6282128950546" target="_blank" rel="noopener noreferrer">Hubungi kami di WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-3">
+        <div class="container d-flex justify-content-between">
+            <span>Coklat <span style="color:#efae8c">Kita.</span></span>
+            <span>© 2026 Coklat Kita · Bandung</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
